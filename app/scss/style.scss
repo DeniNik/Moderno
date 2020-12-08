@@ -1,6 +1,7 @@
 @import "vars";
 @import "global";
 @import "fonts";
+// Начало Хедер
 .header__top-inner {
     display: flex;
     justify-content: space-between;
@@ -57,6 +58,8 @@
     }
 }
 
+//Конец Хедер
+//Начало Search
 .search {
     background-repeat: no-repeat;
     background-size: cover;
@@ -70,13 +73,13 @@
     text-align: center;
     &-title {
         font-size: 48px;
-        font-weight: 700;
+        @include f700;
         line-height: 70px;
         margin-bottom: 25px;
     }
     &-text {
         font-size: 20px;
-        font-weight: 500;
+        @include f500;
         margin-bottom: 58px;
     }
     &-form {
@@ -91,7 +94,7 @@
             height: 56px;
             border: none;
             font-size: 14px;
-            font-weight: 500;
+            @include f500;
             outline: none;
             padding-left: 25px;
             padding-right: 55px;
@@ -109,5 +112,213 @@
             border: none;
             background-color: transparent;
         }
+    }
+}
+
+//Конец SEARCH
+//Начало Продукты
+.products {
+    padding: 110px 0;
+    background-color: $grey;
+}
+
+.products__inner-btn {
+    text-align: center;
+    margin-bottom: 60px;
+    button {
+        padding: 14px 20px;
+        border: none;
+        background-color: #fff;
+        color: $bg;
+        cursor: pointer;
+        &+button {
+            margin-left: 5px;
+        }
+        &.mixitup-control-active {
+            background-color: $red;
+            color: #fff;
+            outline: none;
+        }
+    }
+}
+
+.products__inner-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.product__item {
+    max-width: 442px;
+    width: 100%;
+    box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
+    margin-bottom: 30px;
+    &-img {
+        min-height: 250px;
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 30px;
+        align-items: center;
+        min-height: 90px;
+        @include f500;
+        border-bottom: 1px solid #e7ecf2;
+    }
+    &-name {
+        max-width: 310px;
+    }
+    &-title {
+        color: $bg;
+        font-size: 18px;
+        display: block;
+    }
+    &-category {
+        font-size: 14px;
+        color: $green;
+        display: block;
+    }
+    &-price {
+        @include f700;
+        font-size: 20px;
+        color: $bg;
+    }
+    &-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 70px;
+        padding: 10px 30px;
+    }
+    &-author {
+        display: flex;
+        align-items: center;
+        max-width: 245px;
+        .avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: inline-block;
+            margin-right: 14px;
+        }
+        span {
+            font-size: 14px;
+            @include f500;
+        }
+    }
+    &-star {
+        font-size: 12px;
+        span {
+            color: $bg;
+        }
+    }
+}
+
+.products__bottom-btn {
+    text-align: center;
+    button {
+        width: 163px;
+        height: 52px;
+        margin: 45px 5px 0;
+        background-color: #fff;
+        border: none;
+        box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
+        color: $bg;
+        cursor: pointer;
+        outline: none;
+    }
+}
+
+// конец ПРОДУКТЫ
+// СЛАЙДЕР начало
+.product-slider {
+    padding: 110px 0px 120px;
+    .slick-dots {
+        text-align: center;
+        li {
+            display: inline-block;
+            margin-left: 3px;
+            margin-right: 4px;
+            margin-top: 50px;
+            &.slick-active {
+                button {
+                    background-color: $green;
+                    border: none;
+                }
+            }
+            button {
+                border-radius: 50%;
+                background-color: rgb(232, 232, 232);
+                border: none;
+                font-size: 0;
+                width: 16px;
+                height: 16px;
+                outline: none;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// слайдер ФИНАЛ
+// Блок Преимущества
+.advantages {
+    background-color: $bg;
+    padding: 110px 0px;
+}
+
+.advantages__title {
+    color: #fff;
+}
+
+.advantages__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.advantages__item {
+    max-width: 370px;
+    text-align: center;
+    padding: 0px 10px;
+    &:hover {
+        .advantages__item-images {
+            background-color: $green;
+            svg {
+                width: 60px;
+                transition: all .3000s;
+                fill: white;
+            }
+        }
+        .advantages__item-title {
+            color: $green;
+        }
+    }
+    &-images {
+        width: 114px;
+        height: 114px;
+        background-color: #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 30px;
+        transition: all .555s;
+    }
+    &-title {
+        color: #fff;
+        margin-bottom: 28px;
+        @include f500;
+        font-size: 24px;
+        transition: all .5s;
+    }
+    &-text {
+        font-size: 15px;
     }
 }
