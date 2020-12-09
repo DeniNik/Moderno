@@ -292,6 +292,7 @@
             background-color: $green;
             svg {
                 width: 60px;
+                height: 70px;
                 transition: all .3000s;
                 fill: white;
             }
@@ -320,5 +321,43 @@
     }
     &-text {
         font-size: 15px;
+    }
+}
+
+// Фмнал ПРЕИМУЩЕСТВА
+// Блок  АВТОРЫ
+.author {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__box {
+        width: 650px;
+        min-height: 215px;
+        background-color: $green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__title {
+        font-size: 30px;
+        line-height: 36px;
+        color: #fff;
+        max-width: 280px;
+        margin-right: 45px;
+        span {
+            @include f700;
+        }
+    }
+    &__link {
+        font-size: 18px;
+        line-height: 36px;
+        padding: 14px 40px;
+        background-color: #fff;
+        height: 63px;
+        width: 225px;
     }
 }
