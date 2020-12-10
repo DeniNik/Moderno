@@ -11,8 +11,8 @@ $(function() {
     $(".product-slider__inner").slick({
         dots: true,
         arrows: false,
-        slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToShow: 3,
+        slidesToScroll: 3,
     });
 
 });
